@@ -1,0 +1,10 @@
+<div class="phone">
+  <div class="screen">
+    @for (item of task; track item) {
+    <app-task [task]="item" (delete)="onRemove($event)"></app-task> }
+  </div>
+  <div class="row">
+    <input type="text" [(ngModel)]="inputValue" />
+    <button (click)="addTask()">add todo</button>
+  </div>
+</div>
